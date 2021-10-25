@@ -223,6 +223,11 @@ button:focus {
     &--module {
         margin: 60px auto 0 auto;
     }
+    &--footer {
+        border: none;
+        background-color: $pink;
+        width: 480px;
+    }
 }
 .intro {
     padding: 92px 0 95px 0;
@@ -451,6 +456,18 @@ button:focus {
         justify-content: space-between;
         align-items: center;
     }
+    &__input {
+        display: block;
+        width: 480px;
+        height: 81px;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 26px;
+        color: #C9C6C6;
+        padding: 13px 0 13px 25px;
+    }
 }
 .silver {
     background: linear-gradient(180deg, #C9C6C6 0%, #F1F2F6 100%);
@@ -510,6 +527,12 @@ button:focus {
             width: 60%;
             right: -10px;
             bottom: 0;
+        }
+    }
+    .footer {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -694,6 +717,14 @@ button:focus {
         &--buy {
             width: 100%;
         }
+        &--footer {
+            width: 100%;
+            height: 60px;
+            cursor: pointer;
+            &:hover {
+                background-color: $blue;
+            }
+        }
     }
     .intro {
         padding: 60px 0;
@@ -725,6 +756,13 @@ button:focus {
                     padding: 0 10px 30px 10px;
                 }
             }
+        }
+    }
+    .footer {
+        &__input {
+            height: 50px;
+            width: 100%;
+            font-size: 16px;
         }
     }
 }
