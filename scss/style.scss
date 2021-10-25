@@ -334,7 +334,7 @@ button:focus {
                 }
             }
             &__violet {
-                box-shadow: 20px 20px 30px rgba(19, 176, 187, 0.2);
+                box-shadow: 20px 20px 30px rgba(166, 175, 240, 0.3);
                 &::before {
                     background-color: $violet;
                     color: #ffffff;
@@ -655,6 +655,10 @@ button:focus {
         &--buy {
             margin-bottom: 25px;
         }
+        &--price {
+            font-size: 48px;
+            line-height: 58px;
+        }
     }
     .subtitle {
         font-size: 20px;
@@ -725,6 +729,11 @@ button:focus {
     }
 }
 @media (max-width: 414px) {
+    .title {
+        &--price {
+            font-size: 45px;
+        }
+    }
     .subtitle {
         &--outro {
             width: 100%;
@@ -743,6 +752,12 @@ button:focus {
         &__img {
             width: 190px;
             height: 150px;
+        }
+    }
+    .buy {
+        &__text {
+            width: 100%;
+            margin: 30px auto 0 auto;
         }
     }
 }
