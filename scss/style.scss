@@ -583,11 +583,6 @@ button:focus {
             width: 50%;
         }
     }
-    // .list {
-    //     &__buy {
-    //         width: 400px;
-    //     }
-    // }
     .buy {
         &__inner {
             flex-direction: column;
@@ -763,6 +758,9 @@ button:focus {
             height: 50px;
             width: 100%;
             font-size: 16px;
+        }
+        &__form {
+            width: 100%;
         }
     }
 }
