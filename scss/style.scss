@@ -253,6 +253,46 @@ span {
     &--pink {
         background-color: $pink;
     }
+    &--results {
+        max-width: 400px;
+        margin-top: 50px;
+        background-color: $dark;
+        &--blue {
+            svg {
+                fill: $blue;
+            }
+        }
+        &--lightpink {
+            svg {
+                fill: $lightpink;
+            }
+        }
+        &--brown {
+            svg {
+                fill: $brown;
+            }
+        }
+        &--yellow {
+            svg {
+                fill: $yellow;
+            }
+        }
+        &--green {
+            svg {
+                fill: $green;
+            }
+        }
+        &--orange {
+            svg {
+                fill: $orange;
+            }
+        }
+        &--violet {
+            svg {
+                fill: $violet;
+            }
+        }
+    }
     // &--blue {
     //     background-color: $blue;
     //     svg {
@@ -325,7 +365,6 @@ span {
     padding-top: 100px;
     &__inner {
         margin: 95px 0 80px 0;
-        //display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         &--blue {
@@ -334,11 +373,6 @@ span {
         }
         &--lightpink {
             display: flex;
-            // display: grid;
-            // grid-template-columns: repeat(3, 1fr);
-            // grid-template-rows: repeat(3, 1fr);
-            // grid-column-gap: 25px;
-            // grid-row-gap: 70px; 
         }
         &--brown {
             display: flex;
@@ -378,9 +412,6 @@ span {
             padding: 76px 44px 26px 44px;
             border-radius: 10px;
             position: relative;
-            // &:last-child {
-            //     margin-right: 0;
-            // }
             &::before {
                 display: flex;
                 align-items: center;
@@ -447,30 +478,6 @@ span {
             &__pink {
                 width: 24%;
                 box-shadow: 20px 20px 30px rgba(236, 143, 186, 0.2);
-                // &:nth-child(1) {
-                //     grid-area: 1 / 1 / 2 / 2;
-                // }
-                // &:nth-child(2) {
-                //     grid-area: 1 / 2 / 2 / 4;
-                // }
-                // &:nth-child(3) {
-                //     grid-area: 2 / 1 / 3 / 2;
-                // }
-                // &:nth-child(4) {
-                //     grid-area: 2 / 2 / 3 / 3;
-                // }
-                // &:nth-child(5) {
-                //     grid-area: 2 / 3 / 3 / 4;
-                // }
-                // &:nth-child(6) {
-                //     grid-area: 3 / 1 / 4 / 2;
-                // }
-                // &:nth-child(7) {
-                //     grid-area: 3 / 2 / 4 / 3;
-                // }
-                // &:nth-child(8) {
-                //     grid-area: 3 / 3 / 4 / 4;
-                // }
                 margin-bottom: 60px;
                 &::before {
                     background-color: $lightpink;
@@ -1167,6 +1174,11 @@ span {
                 width: 194px;
                 height: 151px;
             }
+        }
+    }
+    .program {
+        &__text {
+            width: 100%;
         }
     }
 }

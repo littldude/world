@@ -252,6 +252,32 @@ span {
 .button--pink {
   background-color: #C57198;
 }
+.button--results {
+  max-width: 400px;
+  margin-top: 50px;
+  background-color: #181818;
+}
+.button--results--blue svg {
+  fill: #13B0BB;
+}
+.button--results--lightpink svg {
+  fill: #EC8FBA;
+}
+.button--results--brown svg {
+  fill: #E2BAA4;
+}
+.button--results--yellow svg {
+  fill: #FCF6BA;
+}
+.button--results--green svg {
+  fill: #A4E2B5;
+}
+.button--results--orange svg {
+  fill: #FF8878;
+}
+.button--results--violet svg {
+  fill: #A6AFF0;
+}
 .button--module {
   margin: 60px auto 0 auto;
 }
@@ -1020,6 +1046,10 @@ span {
   .module__img--m {
     width: 194px;
     height: 151px;
+  }
+
+  .program__text {
+    width: 100%;
   }
 }
 @media (max-width: 568px) {
