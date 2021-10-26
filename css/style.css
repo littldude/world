@@ -1162,7 +1162,8 @@ span {
     width: 380px;
   }
   .subtitle--program {
-    font-size: 18px;
+    font-size: 20px;
+    border-radius: 0;
   }
 
   .text {
@@ -1256,7 +1257,7 @@ span {
     width: 100%;
   }
   .subtitle--buy {
-    width: 90%;
+    width: 100%;
   }
 
   .button--intro {

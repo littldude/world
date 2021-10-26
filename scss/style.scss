@@ -1309,7 +1309,8 @@ span {
             width: 380px;
         }
         &--program {
-            font-size: 18px;
+            font-size: 20px;
+            border-radius: 0;
         }
     }
     .text {
@@ -1402,7 +1403,7 @@ span {
             width: 100%;
         }
         &--buy {
-            width: 90%;
+            width: 100%;
         }
     }
     .button {
