@@ -61,6 +61,9 @@ button:active,
 button:focus {
     outline: none;
 }
+span {
+    white-space: pre-wrap;
+}
 .container {
     margin: 0 auto;
     max-width: 1180px;
@@ -787,7 +790,7 @@ button:focus {
             content: '';
             display: flex;
             flex: 0 0 auto;
-            background-image: url('../img/buy/tinkoff.svg');
+            background-image: url('../img/buy/tinkoff.png');
             background-size: 100%;
             background-repeat: no-repeat;
             width: 47px;
