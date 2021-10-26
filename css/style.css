@@ -300,11 +300,7 @@ span {
   justify-content: space-between;
 }
 .module__inner--lightpink {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 25px;
-  grid-row-gap: 70px;
+  display: flex;
 }
 .module__inner--brown {
   display: flex;
@@ -393,31 +389,9 @@ span {
   color: #ffffff;
 }
 .module__inner--item__pink {
+  width: 24%;
   box-shadow: 20px 20px 30px rgba(236, 143, 186, 0.2);
-}
-.module__inner--item__pink:nth-child(1) {
-  grid-area: 1/1/2/2;
-}
-.module__inner--item__pink:nth-child(2) {
-  grid-area: 1/2/2/4;
-}
-.module__inner--item__pink:nth-child(3) {
-  grid-area: 2/1/3/2;
-}
-.module__inner--item__pink:nth-child(4) {
-  grid-area: 2/2/3/3;
-}
-.module__inner--item__pink:nth-child(5) {
-  grid-area: 2/3/3/4;
-}
-.module__inner--item__pink:nth-child(6) {
-  grid-area: 3/1/4/2;
-}
-.module__inner--item__pink:nth-child(7) {
-  grid-area: 3/2/4/3;
-}
-.module__inner--item__pink:nth-child(8) {
-  grid-area: 3/3/4/4;
+  margin-bottom: 60px;
 }
 .module__inner--item__pink::before {
   background-color: #EC8FBA;
@@ -845,6 +819,27 @@ span {
     align-items: center;
   }
 }
+@media (max-width: 1020px) {
+  .module__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .module__inner--item {
+    width: 60%;
+    margin-bottom: 60px;
+  }
+  .module__inner--item:last-child {
+    margin-bottom: 0;
+  }
+  .module__inner--item__brown:nth-child(3) {
+    margin-bottom: 60px;
+  }
+  .module__inner--lightpink, .module__inner--yellow, .module__inner--green, .module__inner--orange, .module__inner--violet {
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+}
 @media (max-width: 991px) {
   .title--intro {
     text-align: center;
@@ -854,6 +849,13 @@ span {
 
   .subtitle--outro {
     text-align: center;
+  }
+  .subtitle--program::before {
+    width: 102%;
+  }
+
+  .text--white {
+    color: #181818;
   }
 
   .intro {
@@ -870,6 +872,9 @@ span {
     justify-content: center;
   }
 
+  .module {
+    padding-top: 0;
+  }
   .module__inner {
     flex-direction: column;
     align-items: center;
@@ -882,8 +887,61 @@ span {
   .module__inner--item:last-child {
     margin-bottom: 0;
   }
-  .module__img {
-    width: 50%;
+  .module__img--d {
+    display: none;
+  }
+  .module__img--m {
+    margin-top: 20px;
+    width: 250px;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+  }
+  .module__img--m img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .results__blue, .results__lightpink, .results__brown, .results__yellow, .results__green, .results__orange, .results__violet {
+    background-color: #ffffff;
+    z-index: 100;
+  }
+  .results__inner {
+    position: relative;
+    z-index: 1;
+  }
+  .results__inner::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    z-index: -10;
+  }
+  .results__inner--blue::before {
+    background-color: #13B0BB;
+  }
+  .results__inner--lightpink::before {
+    background-color: #EC8FBA;
+  }
+  .results__inner--brown::before {
+    background-color: #E2BAA4;
+  }
+  .results__inner--yellow::before {
+    background-color: #FCF6BA;
+  }
+  .results__inner--green::before {
+    background-color: #A4E2B5;
+  }
+  .results__inner--orange::before {
+    background-color: #FF8878;
+  }
+  .results__inner--violet::before {
+    background-color: #A6AFF0;
   }
 
   .autor {
@@ -930,27 +988,8 @@ span {
     display: flex;
     flex-direction: column;
   }
-  .module__img--d {
-    display: none;
-  }
-  .module__img--m {
-    margin-top: 20px;
-    width: 250px;
-    height: 200px;
-    display: block;
-    margin-left: auto;
-  }
-  .module__img--m img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
   .module__inner--item {
-    width: 100%;
-  }
-
-  .results {
-    padding: 0;
+    width: 90%;
   }
 
   .autor__img {
@@ -970,6 +1009,11 @@ span {
 
   .subtitle--footer {
     width: auto;
+  }
+
+  .module__img--m {
+    width: 194px;
+    height: 151px;
   }
 }
 @media (max-width: 568px) {
@@ -1056,6 +1100,7 @@ span {
     margin: 60px 0;
   }
   .module__inner--item {
+    width: 95%;
     padding: 51px 38px 36px 38px;
     text-align: left;
   }
