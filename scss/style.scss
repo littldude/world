@@ -96,7 +96,11 @@ button:focus {
         max-width: 660px
     }
     &--results {
-        text-align: center;
+        text-align: left;
+    }
+    &--autor {
+        margin-bottom: 35px;
+        width: 400px;
     }
 }
 .subtitle {
@@ -164,6 +168,9 @@ button:focus {
     &--module {
         margin-bottom: 30px;
     }
+    &--white {
+        color: #ffffff;
+    }
     &--center {
         text-align: center;
     }
@@ -186,13 +193,36 @@ button:focus {
     &--tinkoff {
         color: #a8a8a8;
     }
+    &--check {
+        display: flex;
+        align-items: baseline;
+        &::before {
+            content: '';
+            background-image: url('../img/check-blue.svg');
+            display: flex;
+            flex: 0 0 auto;
+            width: 18px;
+            height: 13px;
+            margin-right: 10px;
+        }
+    }
+    &--mtop {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    &--more {
+        margin-top: 25px;
+    }
+    &--autor {
+        margin-bottom: 25px;
+    }
 }
 .button {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 400px;
+    //max-width: 400px;
     padding: 0 30px;
     height: 70px;
     border-radius: 20px;
@@ -214,43 +244,46 @@ button:focus {
         background-color: $green;
         transition: .2s linear;
     }
+    &--intro {
+        width: 382px;
+    }
     &--pink {
         background-color: $pink;
     }
-    &--blue {
-        background-color: $blue;
-        svg {
-            fill: #ffffff;
-        }
-    }
-    &--lightpink {
-        background-color: $lightpink;
-        color: $dark;
-    }
-    &--brown {
-        background-color: $brown;
-        color: $dark;
-    }
-    &--yellow {
-        background-color: $yellow;
-        color: $dark;
-    }
-    &--green {
-        background-color: $green;
-        color: $dark;
-    }
-    &--orange {
-        background-color: $orange;
-        svg {
-            fill: #ffffff;
-        }
-    }
-    &--violet {
-        background-color: $violet;
-        svg {
-            fill: #ffffff;
-        }
-    }
+    // &--blue {
+    //     background-color: $blue;
+    //     svg {
+    //         fill: #ffffff;
+    //     }
+    // }
+    // &--lightpink {
+    //     background-color: $lightpink;
+    //     color: $dark;
+    // }
+    // &--brown {
+    //     background-color: $brown;
+    //     color: $dark;
+    // }
+    // &--yellow {
+    //     background-color: $yellow;
+    //     color: $dark;
+    // }
+    // &--green {
+    //     background-color: $green;
+    //     color: $dark;
+    // }
+    // &--orange {
+    //     background-color: $orange;
+    //     svg {
+    //         fill: #ffffff;
+    //     }
+    // }
+    // &--violet {
+    //     background-color: $violet;
+    //     svg {
+    //         fill: #ffffff;
+    //     }
+    // }
     &--module {
         margin: 60px auto 0 auto;
     }
@@ -554,18 +587,143 @@ button:focus {
     }
 }
 .results {
-    padding: 0 100px;
+    padding: 70px 0 90px 0;
+    &__blue {
+        background-color: $blue;
+    }
+    &__lightpink {
+        background-color: $lightpink;
+    }
+    &__brown {
+        background-color: $brown;
+    }
+    &__yellow {
+        background-color: $yellow;
+    }
+    &__green {
+        background-color: $green;
+    }
+    &__orange {
+        background-color: $orange;
+    }
+    &__violet {
+        background-color: $violet;
+    }
+    &__inner {
+        width: 80%;
+        margin-top: 40px;
+        background-color: #ffffff;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        padding: 50px;
+    }
 }
 .list {
     &__buy {
         margin-top: 35px;
     }
     &__item {
-        margin-bottom: 35px; 
+        margin-bottom: 30px; 
         list-style: none;
         &:last-child {
             margin-bottom: 0;
         }
+        &--circle {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: '';
+                display: flex;
+                flex: 0 0 auto;
+                width: 9px;
+                height: 9px;
+                background-color: #C4C4C4;
+                border-radius: 100%;
+                margin-right: 10px;
+            }
+        }
+        &--check {
+            display: flex;
+            align-items: baseline;
+            &::before {
+                display: flex;
+                flex: 0 0 auto;
+                content: '';
+                background-size: 100%;
+                background-repeat: no-repeat;
+                width: 18px;
+                height: 13px;
+                margin-right: 14px;
+            }
+            &__blue {
+                &::before {
+                    content: url('../img/check-blue.svg');
+                }
+            }
+            &__lightpink {
+                &::before {
+                    content: url('../img/check-lightpink.svg');
+                }
+            }
+            &__brown {
+                &::before {
+                    content: url('../img/check-brown.svg');
+                }
+            }
+            &__yellow {
+                &::before {
+                    content: url('../img/check-yellow.svg');
+                }
+            }
+            &__green {
+                &::before {
+                    content: url('../img/check-green.svg');
+                }
+            }
+            &__orange {
+                &::before {
+                    content: url('../img/check-orange.svg');
+                }
+            }
+            &__violet {
+                &::before {
+                    content: url('../img/check-violet.svg');
+                }
+            }
+        }
+    }
+    &__program {
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+}
+.autor {
+    background: $green;
+    padding: 100px 0 65px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    &__block {
+        position: relative;
+        width: 580px;
+        background-color: #ffffff;
+        padding: 50px 51px 56px 80px;
+        border-radius: 10px;
+        margin-left: auto;
+        box-shadow: 20px 20px 30px #52AF6C;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: row;
+    }
+    &__img {
+        display: block;
+        width: 680px;
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        z-index: 1;
     }
 }
 .buy {
@@ -693,6 +851,13 @@ button:focus {
         top: 2px;
     }
 }
+@media (max-width: 1440px) {
+    .autor { 
+        &__img {
+            left: 2%;
+        }
+    }
+}
 @media (max-width: 1366px) {
     .intro {
         padding: 90px 0;
@@ -707,6 +872,12 @@ button:focus {
 @media (max-width: 1190px) {
     .container {
         padding: 0 1%;
+    }
+    .autor {
+        &__img {
+            width: 55%;
+            left: 0;
+        }
     }
     .buy {
         &__inner {
@@ -729,6 +900,11 @@ button:focus {
             width: 60%;
             right: -10px;
             bottom: 0;
+        }
+    }
+    .autor {
+        &__img {
+            left: -80px;
         }
     }
     .footer {
@@ -779,6 +955,22 @@ button:focus {
         }
         &__img {
             width: 50%;
+        }
+    }
+    .autor {
+        padding: 60px 0 0 0;
+        &__inner {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        &__block {
+            width: 90%;
+            margin-left: 0;
+        }
+        &__img {
+            margin-top: 40px;
+            width: 700px;
+            position: static;
         }
     }
     .buy {
@@ -837,6 +1029,12 @@ button:focus {
     }
     .results {
         padding: 0;
+    }
+    .autor {
+        &__img {
+            margin: 30px auto 0 auto;
+            width: 70%;
+        }
     }
     .buy {
         &__text {
@@ -898,6 +1096,9 @@ button:focus {
             font-size: 16px;
             line-height: 22px;
         }
+        &--price {
+            width: auto;
+        }
         &--buy {
             width: 380px;
         }
@@ -940,6 +1141,15 @@ button:focus {
             }
         }
     }
+    .autor {
+        padding: 30px 0 0 0;
+        &__block {
+            padding: 40px 30px;
+        }
+        &__img {
+            width: 80%;
+        }
+    }
     .buy {
         padding: 70px 0;
         &__inner {
@@ -967,6 +1177,9 @@ button:focus {
         &--price {
             font-size: 45px;
         }
+        &--autor {
+            width: 290px;
+        }
     }
     .subtitle {
         &--outro {
@@ -988,6 +1201,15 @@ button:focus {
             height: 150px;
         }
     }
+    .autor {
+        &__block {
+            width: 100%;
+            padding: 40px 25px;
+        }
+        &__img {
+            width: 95%;
+        }
+    } 
     .buy {
         &__text {
             width: 100%;

@@ -96,7 +96,11 @@ button:focus {
   max-width: 660px;
 }
 .title--results {
-  text-align: center;
+  text-align: left;
+}
+.title--autor {
+  margin-bottom: 35px;
+  width: 400px;
 }
 
 .subtitle {
@@ -162,6 +166,9 @@ button:focus {
 .text--module {
   margin-bottom: 30px;
 }
+.text--white {
+  color: #ffffff;
+}
 .text--center {
   text-align: center;
 }
@@ -184,13 +191,35 @@ button:focus {
 .text--tinkoff {
   color: #a8a8a8;
 }
+.text--check {
+  display: flex;
+  align-items: baseline;
+}
+.text--check::before {
+  content: "";
+  background-image: url("../img/check-blue.svg");
+  display: flex;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 13px;
+  margin-right: 10px;
+}
+.text--mtop {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.text--more {
+  margin-top: 25px;
+}
+.text--autor {
+  margin-bottom: 25px;
+}
 
 .button {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 400px;
   padding: 0 30px;
   height: 70px;
   border-radius: 20px;
@@ -213,42 +242,11 @@ button:focus {
   background-color: #A4E2B5;
   transition: 0.2s linear;
 }
+.button--intro {
+  width: 382px;
+}
 .button--pink {
   background-color: #C57198;
-}
-.button--blue {
-  background-color: #13B0BB;
-}
-.button--blue svg {
-  fill: #ffffff;
-}
-.button--lightpink {
-  background-color: #EC8FBA;
-  color: #181818;
-}
-.button--brown {
-  background-color: #E2BAA4;
-  color: #181818;
-}
-.button--yellow {
-  background-color: #FCF6BA;
-  color: #181818;
-}
-.button--green {
-  background-color: #A4E2B5;
-  color: #181818;
-}
-.button--orange {
-  background-color: #FF8878;
-}
-.button--orange svg {
-  fill: #ffffff;
-}
-.button--violet {
-  background-color: #A6AFF0;
-}
-.button--violet svg {
-  fill: #ffffff;
 }
 .button--module {
   margin: 60px auto 0 auto;
@@ -533,18 +531,130 @@ button:focus {
 }
 
 .results {
-  padding: 0 100px;
+  padding: 70px 0 90px 0;
+}
+.results__blue {
+  background-color: #13B0BB;
+}
+.results__lightpink {
+  background-color: #EC8FBA;
+}
+.results__brown {
+  background-color: #E2BAA4;
+}
+.results__yellow {
+  background-color: #FCF6BA;
+}
+.results__green {
+  background-color: #A4E2B5;
+}
+.results__orange {
+  background-color: #FF8878;
+}
+.results__violet {
+  background-color: #A6AFF0;
+}
+.results__inner {
+  width: 80%;
+  margin-top: 40px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 .list__buy {
   margin-top: 35px;
 }
 .list__item {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
   list-style: none;
 }
 .list__item:last-child {
   margin-bottom: 0;
+}
+.list__item--circle {
+  display: flex;
+  align-items: center;
+}
+.list__item--circle::before {
+  content: "";
+  display: flex;
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  background-color: #C4C4C4;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+.list__item--check {
+  display: flex;
+  align-items: baseline;
+}
+.list__item--check::before {
+  display: flex;
+  flex: 0 0 auto;
+  content: "";
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 13px;
+  margin-right: 14px;
+}
+.list__item--check__blue::before {
+  content: url("../img/check-blue.svg");
+}
+.list__item--check__lightpink::before {
+  content: url("../img/check-lightpink.svg");
+}
+.list__item--check__brown::before {
+  content: url("../img/check-brown.svg");
+}
+.list__item--check__yellow::before {
+  content: url("../img/check-yellow.svg");
+}
+.list__item--check__green::before {
+  content: url("../img/check-green.svg");
+}
+.list__item--check__orange::before {
+  content: url("../img/check-orange.svg");
+}
+.list__item--check__violet::before {
+  content: url("../img/check-violet.svg");
+}
+.list__program {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-bottom: 20px;
+}
+
+.autor {
+  background: #A4E2B5;
+  padding: 100px 0 65px 0;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.autor__block {
+  position: relative;
+  width: 580px;
+  background-color: #ffffff;
+  padding: 50px 51px 56px 80px;
+  border-radius: 10px;
+  margin-left: auto;
+  box-shadow: 20px 20px 30px #52AF6C;
+}
+.autor__inner {
+  display: flex;
+  flex-direction: row;
+}
+.autor__img {
+  display: block;
+  width: 680px;
+  position: absolute;
+  left: 100px;
+  bottom: 0;
+  z-index: 1;
 }
 
 .buy {
@@ -676,6 +786,11 @@ button:focus {
   top: 2px;
 }
 
+@media (max-width: 1440px) {
+  .autor__img {
+    left: 2%;
+  }
+}
 @media (max-width: 1366px) {
   .intro {
     padding: 90px 0;
@@ -690,6 +805,11 @@ button:focus {
 @media (max-width: 1190px) {
   .container {
     padding: 0 1%;
+  }
+
+  .autor__img {
+    width: 55%;
+    left: 0;
   }
 
   .buy__inner--item {
@@ -710,6 +830,10 @@ button:focus {
     width: 60%;
     right: -10px;
     bottom: 0;
+  }
+
+  .autor__img {
+    left: -80px;
   }
 
   .footer__inner {
@@ -756,6 +880,23 @@ button:focus {
   }
   .module__img {
     width: 50%;
+  }
+
+  .autor {
+    padding: 60px 0 0 0;
+  }
+  .autor__inner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .autor__block {
+    width: 90%;
+    margin-left: 0;
+  }
+  .autor__img {
+    margin-top: 40px;
+    width: 700px;
+    position: static;
   }
 
   .buy__inner {
@@ -806,6 +947,11 @@ button:focus {
 
   .results {
     padding: 0;
+  }
+
+  .autor__img {
+    margin: 30px auto 0 auto;
+    width: 70%;
   }
 
   .buy__text {
@@ -866,6 +1012,9 @@ button:focus {
     font-size: 16px;
     line-height: 22px;
   }
+  .subtitle--price {
+    width: auto;
+  }
   .subtitle--buy {
     width: 380px;
   }
@@ -912,6 +1061,16 @@ button:focus {
     font-size: 32px;
   }
 
+  .autor {
+    padding: 30px 0 0 0;
+  }
+  .autor__block {
+    padding: 40px 30px;
+  }
+  .autor__img {
+    width: 80%;
+  }
+
   .buy {
     padding: 70px 0;
   }
@@ -935,6 +1094,9 @@ button:focus {
   .title--price {
     font-size: 45px;
   }
+  .title--autor {
+    width: 290px;
+  }
 
   .subtitle--outro {
     width: 100%;
@@ -953,6 +1115,14 @@ button:focus {
   .module__img {
     width: 190px;
     height: 150px;
+  }
+
+  .autor__block {
+    width: 100%;
+    padding: 40px 25px;
+  }
+  .autor__img {
+    width: 95%;
   }
 
   .buy__text {
