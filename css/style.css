@@ -255,7 +255,9 @@ span {
 .button--results {
   max-width: 400px;
   margin-top: 50px;
-  background-color: #181818;
+  background-color: #ffffff;
+  color: #181818;
+  border: 1px #181818 solid;
 }
 .button--results--blue svg {
   fill: #13B0BB;
@@ -1051,6 +1053,10 @@ span {
   .program__text {
     width: 100%;
   }
+
+  .results {
+    padding: 60px 0;
+  }
 }
 @media (max-width: 568px) {
   .container {
@@ -1101,6 +1107,9 @@ span {
   }
   .subtitle--buy {
     width: 380px;
+  }
+  .subtitle--program {
+    font-size: 18px;
   }
 
   .text {
@@ -1156,6 +1165,13 @@ span {
     width: 80%;
   }
 
+  .results {
+    padding: 60px 0 0 0;
+  }
+  .results__inner {
+    padding: 30px;
+  }
+
   .buy {
     padding: 70px 0;
   }
@@ -1207,6 +1223,14 @@ span {
   }
   .module__inner--item {
     padding: 51px 30px 36px 30px;
+  }
+
+  .results__inner {
+    width: 94%;
+  }
+  .results__inner::before {
+    top: -7px;
+    right: -7px;
   }
 
   .autor__block {
