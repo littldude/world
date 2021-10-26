@@ -506,6 +506,7 @@ span {
 }
 .program__text {
   margin-bottom: 30px;
+  width: 51%;
 }
 
 .results {
@@ -850,8 +851,13 @@ span {
   .subtitle--outro {
     text-align: center;
   }
+  .subtitle--program {
+    background-color: #13B0BB;
+    padding: 5px;
+    border-radius: 20px;
+  }
   .subtitle--program::before {
-    width: 102%;
+    display: none;
   }
 
   .text--white {
@@ -1154,6 +1160,10 @@ span {
     width: 90%;
   }
 
+  .button--intro {
+    width: 99%;
+  }
+
   .intro {
     padding: 40px 0;
   }
@@ -1164,6 +1174,9 @@ span {
   .module__img {
     width: 190px;
     height: 150px;
+  }
+  .module__inner--item {
+    padding: 51px 30px 36px 30px;
   }
 
   .autor__block {

@@ -590,6 +590,7 @@ span {
     margin-bottom: 40px;
     &__text {
         margin-bottom: 30px;
+        width: 51%;
     }
 }
 .results {
@@ -962,8 +963,11 @@ span {
             text-align: center;
         }
         &--program {
+            background-color: $blue;
+            padding: 5px;
+            border-radius: 20px;
             &::before {
-                width: 102%;
+                display: none;
             }
         }
     }
@@ -1301,6 +1305,11 @@ span {
             width: 90%;
         }
     }
+    .button {
+        &--intro {
+            width: 99%;
+        }
+    }
     .intro {
         padding: 40px 0;
         &__img {
@@ -1311,6 +1320,11 @@ span {
         &__img {
             width: 190px;
             height: 150px;
+        }
+        &__inner {
+            &--item {
+                padding: 51px 30px 36px 30px;
+            }
         }
     }
     .autor {
