@@ -476,8 +476,8 @@
                     </div>
                     <div class="buy__inner--item__body">
                         <p class="text text--center">8 месяцев</p>
-                        <p class="price">110 000 р.</p>
-                        <p class="title title--price title--green text--center">92 000 р.</p>
+                        <!-- <p class="price">110 000 р.</p> -->
+                        <p class="title title--price title--green text--center">110 000 р.</p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH1"></p><p class="text text--medium text--currency" id="EUR1"></p><p class="text text--medium text--currency" id="USD1"></p>
                         </div>
@@ -506,8 +506,8 @@
                     </div>
                     <div class="buy__inner--item__body">
                         <p class="text text--center">8 месяцев</p>
-                        <p class="price">90 000 р.</p>
-                        <p class="title title--price title--green text--center">62 000 р.</p>
+                        <!-- <p class="price">90 000 р.</p> -->
+                        <p class="title title--price title--green text--center">90 000 р.</p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH2"></p><p class="text text--medium text--currency" id="EUR2"></p><p class="text text--medium text--currency" id="USD2"></p>
                         </div>
@@ -535,8 +535,8 @@
                     </div>
                     <div class="buy__inner--item__body">
                         <p class="text text--center">6 месяцев</p>
-                        <p class="price">60 000 р.</p>
-                        <p class="title title--price title--green text--center">42 000 р.</p>
+                        <!-- <p class="price">60 000 р.</p> -->
+                        <p class="title title--price title--green text--center">60 000 р.</p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH3"></p><p class="text text--medium text--currency" id="EUR3"></p><p class="text text--medium text--currency" id="USD3"></p>
                         </div>
@@ -611,17 +611,17 @@
     </script>
     <script>
         $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
-            $('#USD1').html((92000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR1').html((92000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH1').html((92000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+            $('#USD1').html((110000 / data.Valute.USD.Value).toFixed() + '$');
+            $('#EUR1').html((110000 / data.Valute.EUR.Value).toFixed() + '€');
+            $('#UAH1').html((110000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
             
-            $('#USD2').html((62000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR2').html((62000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH2').html((62000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+            $('#USD2').html((90000 / data.Valute.USD.Value).toFixed() + '$');
+            $('#EUR2').html((90000 / data.Valute.EUR.Value).toFixed() + '€');
+            $('#UAH2').html((90000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
         
-            $('#USD3').html((42000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR3').html((42000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH3').html((42000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+            $('#USD3').html((60000 / data.Valute.USD.Value).toFixed() + '$');
+            $('#EUR3').html((60000 / data.Valute.EUR.Value).toFixed() + '€');
+            $('#UAH3').html((60000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
         });
     </script>
 </body>
