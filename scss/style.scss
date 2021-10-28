@@ -219,6 +219,14 @@ span {
     &--autor {
         margin-bottom: 25px;
     }
+    &--grey {
+        color: #a8a8a8;
+    }
+    &__small {
+        width: 80%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+    }
 }
 .button {
     position: relative;
@@ -745,7 +753,7 @@ span {
 .buy {
     padding: 100px 0 93px 0;
     &__inner {
-        margin: 50px 0 60px 0;
+        margin: 50px 0 40px 0;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
