@@ -464,6 +464,28 @@
             </div>
         </div>
     </section>
+    <section class="promo">
+        <div class="container">
+            <div class="promo__inner">
+                <div class="promo__inner--block">
+                    <p class="subtitle subtitle--promo">Введите ваш ник в Instagram и получите <span class="text--bold">промокод со скидкой</span> на программу «Целый мир»</p>
+                    <form action="#" class="promo__form" id="form">
+                        <input class="promo__form--input" placeholder="Введите ваш ник" type="text" id="test" value="">
+                        <button type="button" onclick="submitMe('test')" id="testButton" class="button button--pink promo__form--button"><svg><use href="sprite.svg#check"></use></svg>Узнать промокод</button>
+                        
+                    </form>
+                </div>
+                <div class="promo__block" id="promoBlock">
+                    <div class="promo__block--inner">
+                        <p class="text text--promo text--form">Ваш промокод: <span class="text--red text--bold" id="promo"></span></p>
+                        <p class="text text--form">Ваша скидка: <span class="text--red text--bold" id="cost"></span></p>
+                    </div>
+                    
+                </div>
+                <p class="text" id="error">Ошибка</p>
+            </div>
+        </div>
+    </section>
     <section class="buy" id="buy">
         <div class="container">
             <h2 class="title text--center text--uppercase title--buy">Выберите свой формат участия</h2>
@@ -477,11 +499,11 @@
                     <div class="buy__inner--item__body">
                         <p class="text text--center">8 месяцев</p>
                         <p class="price">110 000 р.</p>
-                        <p class="title title--price title--green text--center">95 000 р.</p>
+                        <p class="title title--price title--green text--center" id="platina"></p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH1"></p><p class="text text--medium text--currency" id="EUR1"></p><p class="text text--medium text--currency" id="USD1"></p>
                         </div>
-                        <p class="text text--center text--tinkoff">Рассрочка от 7917 руб./мес</p>
+                        <p class="text text--center text--tinkoff">Рассрочка от <span class="credit platinaCredit">7917</span> руб./мес</p>
                         <ul class="list list__buy">
                             <li class="list__item"><p class="text">Сквозной модуль – <span class="text--bold">ЭНЕРГИЯ</span></p></li>
                             <li class="list__item"><p class="text">1 модуль<br><span class="text--bold">Возвращение к себе</span></p></li>
@@ -497,7 +519,7 @@
                     <div class="buy__inner--item__footer">
                         <a class="button button--buy button--pink" href="https://kurs-kurkin.ru/mirplatinum" target="_blank" onClick="fbq('track', 'Purchase', {value:89000.00, currency:'RUB', id:'Мир'});">Оставить заявку</a>
                         <a class="buy__link" href="https://kurs-kurkin.ru/mirplatinum"><span class="text--border">оформить рассрочку</span></a>
-                        <p class="subtitle subtitle--money text--bold text--center">от 7917 руб./мес</p>
+                        <p class="subtitle subtitle--money text--bold text--center">от <span class="credit platinaCredit"></span> руб./мес</p>
                     </div>
                 </div>
                 <div class="buy__inner--item">
@@ -507,11 +529,11 @@
                     <div class="buy__inner--item__body">
                         <p class="text text--center">8 месяцев</p>
                         <p class="price">80 000 р.</p>
-                        <p class="title title--price title--green text--center">65 000 р.</p>
+                        <p class="title title--price title--green text--center" id="gold"></p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH2"></p><p class="text text--medium text--currency" id="EUR2"></p><p class="text text--medium text--currency" id="USD2"></p>
                         </div>
-                        <p class="text text--center text--tinkoff">Рассрочка от 5417 руб./мес</p>
+                        <p class="text text--center text--tinkoff">Рассрочка от <span class="credit goldCredit"></span> руб./мес</p>
                         <ul class="list list__buy">
                             <li class="list__item"><p class="text">Сквозной модуль – <span class="text--bold">ЭНЕРГИЯ</span></p></li>
                             <li class="list__item"><p class="text">1 модуль<br><span class="text--bold">Возвращение к себе</span></p></li>
@@ -526,7 +548,7 @@
                     <div class="buy__inner--item__footer">
                         <a class="button button--buy button--pink" href="https://kurs-kurkin.ru/mirgold" target="_blank" onClick="fbq('track', 'Purchase', {value:59000.00, currency:'RUB', id:'Мир2'});">Оставить заявку</a>
                         <a class="buy__link" href="https://kurs-kurkin.ru/mirgold"><span class="text--border">оформить рассрочку</span></a>
-                        <p class="subtitle subtitle--money text--bold text--center">от 5417 руб./мес</p>
+                        <p class="subtitle subtitle--money text--bold text--center">от <span class="credit goldCredit"></span> руб./мес</p>
                     </div>
                 </div>
                 <div class="buy__inner--item">
@@ -536,11 +558,11 @@
                     <div class="buy__inner--item__body">
                         <p class="text text--center">6 месяцев</p>
                         <p class="price">60 000 р.</p>
-                        <p class="title title--price title--green text--center">45 000 р.</p>
+                        <p class="title title--price title--green text--center" id="silver"></p>
                         <div class="buy__inner--currency">
                             <p class="text text--currency" id="UAH3"></p><p class="text text--medium text--currency" id="EUR3"></p><p class="text text--medium text--currency" id="USD3"></p>
                         </div>
-                        <p class="text text--center text--tinkoff">Рассрочка от 3750 руб./мес</p>
+                        <p class="text text--center text--tinkoff">Рассрочка от <span class="credit silverCredit"></span> руб./мес</p>
                         <ul class="list list__buy">
                             <li class="list__item"><p class="text">Сквозной модуль – <span class="text--bold">ЭНЕРГИЯ</span></p></li>
                             <li class="list__item"><p class="text">1 модуль<br><span class="text--bold">Возвращение к себе</span></p></li>
@@ -554,7 +576,7 @@
                     <div class="buy__inner--item__footer">
                         <a class="button button--buy button--pink" href="https://kurs-kurkin.ru/mirsilver" target="_blank" onClick="fbq('track', 'Purchase', {value:39000.00, currency:'RUB', id:'Мир3'});">Оставить заявку</a>
                         <a class="buy__link" href="https://kurs-kurkin.ru/mirsilver"><span class="text--border">оформить рассрочку</span></a>
-                        <p class="subtitle subtitle--money text--bold text--center">от 3750 руб./мес</p>
+                        <p class="subtitle subtitle--money text--bold text--center" id="">от <span class="credit silverCredit"></span> руб./мес</p>
                     </div>
                 </div>
             </div>
@@ -613,19 +635,52 @@
         });
     </script>
     <script>
-        $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
-            $('#USD1').html((95000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR1').html((95000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH1').html((95000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+        function separate(num) {
+            return String(num).replace(/(\d)(?=(\d{3})+$)/g, '$1 ');
+        }
+        $.getJSON("price.json", function(data) {
+            let platina = data["money"].platina;
+            let gold = data["money"].gold;
+            let silver = data["money"].silver;
             
-            $('#USD2').html((65000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR2').html((65000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH2').html((65000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
-        
-            $('#USD3').html((45000 / data.Valute.USD.Value).toFixed() + '$');
-            $('#EUR3').html((45000 / data.Valute.EUR.Value).toFixed() + '€');
-            $('#UAH3').html((45000 / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
-        });
+            $('#platina').html(`${separate(platina)} р.`);
+            $('#gold').html(`${separate(gold)} р.`);
+            $('#silver').html(`${separate(silver)} р.`);
+
+            $('.platinaCredit').html(Math.floor(platina / 12));
+            $('.goldCredit').html(Math.floor(gold / 12));
+            $('.silverCredit').html(Math.floor(silver / 12));
+                
+               $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+                    $('#USD1').html((platina / data.Valute.USD.Value).toFixed() + '$');
+                    $('#EUR1').html((platina / data.Valute.EUR.Value).toFixed() + '€');
+                    $('#UAH1').html((platina / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+                    
+                    $('#USD2').html((gold / data.Valute.USD.Value).toFixed() + '$');
+                    $('#EUR2').html((gold / data.Valute.EUR.Value).toFixed() + '€');
+                    $('#UAH2').html((gold / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+                
+                    $('#USD3').html((silver / data.Valute.USD.Value).toFixed() + '$');
+                    $('#EUR3').html((silver / data.Valute.EUR.Value).toFixed() + '€');
+                    $('#UAH3').html((silver / (data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+                })
+       });
+    </script>
+    <script>
+        function submitMe(id) {
+        let value = document.getElementById(id).value;
+        $.getJSON("promo.json", function(data) {
+            let nicks = data[0]
+            let costs = data[1]
+            let key = value in nicks ? value : 'default';
+            let code = nicks[key];
+            let cost = costs[code];
+    
+            document.getElementById('promoBlock').style.display = "block";
+            $('#promo').html(code);
+            $('#cost').html(`${cost} рублей`);
+        })
+    };
     </script>
 </body>
 </html>
