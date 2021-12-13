@@ -478,11 +478,10 @@
                 <div class="promo__block" id="promoBlock">
                     <div class="promo__block--inner">
                         <p class="text text--promo text--form">Ваш промокод: <span class="text--red text--bold" id="promo"></span></p>
-                        <p class="text text--form">Ваша скидка: <span class="text--red text--bold" id="cost"></span></p>
+                        <p class="text text--form text--form__cost" id="promoCost">Ваша скидка: <span class="text--red text--bold" id="cost"></span></p>
                     </div>
                     
                 </div>
-                <p class="text" id="error">Ошибка</p>
             </div>
         </div>
     </section>
@@ -672,13 +671,21 @@
         $.getJSON("promo.json", function(data) {
             let nicks = data[0]
             let costs = data[1]
-            let key = value in nicks ? value : 'default';
-            let code = nicks[key];
-            let cost = costs[code];
-    
+            value = value.toLowerCase();
             document.getElementById('promoBlock').style.display = "block";
-            $('#promo').html(code);
-            $('#cost').html(`${cost} рублей`);
+
+            document.getElementById('promoCost').style.display = value in nicks ? "block" : "none";
+            
+            if (value in nicks) {
+                let key = value;
+                let code = nicks[key];
+                let cost = costs[code];
+
+                $('#promo').html(code);
+                $('#cost').html(`${cost} рублей`);
+            } else {
+                $('#promo').html('Профиль с таким ником не найден. Попробуйте еще раз');
+            }
         })
     };
     </script>

@@ -887,9 +887,6 @@ span {
         top: 2px;
     }
 }
-#error {
-    display: none;
-}
 .promo {
     padding: 90px 0;
     &__inner {
@@ -913,6 +910,9 @@ span {
             padding: 8px 23px;
             outline: none;
             color: #C9C6C6;
+            &:focus {
+                color: $dark;
+            }
         }
         &--button {
             margin-left: 40px;

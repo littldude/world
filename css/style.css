@@ -813,10 +813,6 @@ span {
   top: 2px;
 }
 
-#error {
-  display: none;
-}
-
 .promo {
   padding: 90px 0;
 }
@@ -840,6 +836,9 @@ span {
   padding: 8px 23px;
   outline: none;
   color: #C9C6C6;
+}
+.promo__form--input:focus {
+  color: #181818;
 }
 .promo__form--button {
   margin-left: 40px;
